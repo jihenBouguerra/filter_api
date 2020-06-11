@@ -38,7 +38,16 @@ To run the project, you need to:
 ## Exemples ##
 ### Query 1 ###
 * Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order.
-* http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]
+* http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]&order_by=[clicks]&end_date=2017-06-01&inc=False
+### Query 2 ###
+* Show the number of installs that occurred in May of 2017 on iOS, broken down by date, sorted by date in ascending order.
+* http://localhost:8000/api/filter?group_by=[date]&sum=[installs]&order_by=[date]&end_date=2017-05-31&start_date=2017-05-01&inc=True
+### Query 3 ###
+* Show revenue, earned on June 1, 2017 in US, broken down by operating system and sorted by revenue in descending order.
+http://localhost:8000/api/filter?group_by=[os]&sum=[revenue]&order_by=[revenue]&end_date=2017-06-01&start_date=2017-06-01&inc=False&countries=[US]
+### Query 4 ###
+* Show CPI and spend for Canada (CA) broken down by channel ordered by CPI in descending order. Please think carefully which is an appropriate aggregate function for CPI.
+http://localhost:8000/api/filter?order_by=[cpi]&inc=False&countries=[CA]
 
 ## Authors ##
 
