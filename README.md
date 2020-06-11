@@ -38,7 +38,7 @@ To run the project, you need to:
 ## Exemples ##
 ### Query 1 ###
 * Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order.
-*http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]
+* http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]
 
 ## Authors ##
 
