@@ -24,16 +24,18 @@ To run the project, you need to:
 
 ## API Parameters ##
 
-* [display]: List of the columns that should be displayed 
-* [countries]: List of the countries that should be filtred 
-* [os]: List of the channels that should be filtred 
-* [channels]: List of the channels that should be filtred
-* [order_by]: List of the culumns for the  order by
-* [group_by]:  List of the culumns for the  group by
-* [sum]:  List of the culumns that will be summed according to the group by 
-* [start_date]:  The start date for the date filter
-* [end_date]: The end date for the date filter
-* [inc]: Defines if the order by is ascending
+* [display:list]: List of the columns that should be displayed 
+* [countries:list]: List of the countries that should be filtred 
+* [os:list]: List of the channels that should be filtred 
+* [channels:list]: List of the channels that should be filtred
+* [order_by:list]: List of the culumns for the  order by
+* [group_by:list]:  List of the culumns for the  group by
+* [sum:list]:  List of the culumns that will be summed according to the group by 
+* [start_date:Datetime: "%Y-%m-%d"]:  The start date for the date filter 
+* [end_date:Datetime: "%Y-%m-%d"]: The end date for the date filter
+* [inc: Boolean]: Defines if the order by is ascending
+
+## Exemples ##
 
 ## Authors ##
 
