@@ -20,6 +20,7 @@ To run the project, you need to:
 * The adress of the application is: http://localhost:8000/api/filter.
 * Lest's filter only countries in DE: http://localhost:8000/api/filter?countries=[DE].
 * Enjoy playing with the filter :smiley:.
+* More filters http://localhost:8000/api/filter?countries=[DE]&display=[date,channel,country,cpi,os]&os=[ios,android]&channels=[facebook,google,chartboost].
 
 
 ## Authors ##
