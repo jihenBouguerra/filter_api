@@ -39,15 +39,21 @@ To run the project, you need to:
 ### Query 1 ###
 * Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order.
 * http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]&order_by=[clicks]&end_date=2017-06-01&inc=False
+
+![q1](https://user-images.githubusercontent.com/22852604/84398621-77e9a600-ac00-11ea-876f-95144e6f8b09.PNG)
+
 ### Query 2 ###
 * Show the number of installs that occurred in May of 2017 on iOS, broken down by date, sorted by date in ascending order.
 * http://localhost:8000/api/filter?group_by=[date]&sum=[installs]&order_by=[date]&end_date=2017-05-31&start_date=2017-05-01&inc=True
+![q2](https://user-images.githubusercontent.com/22852604/84398623-77e9a600-ac00-11ea-9fdc-aa4c8a81d098.PNG)
 ### Query 3 ###
 * Show revenue, earned on June 1, 2017 in US, broken down by operating system and sorted by revenue in descending order.
 http://localhost:8000/api/filter?group_by=[os]&sum=[revenue]&order_by=[revenue]&end_date=2017-06-01&start_date=2017-06-01&inc=False&countries=[US]
+![q3](https://user-images.githubusercontent.com/22852604/84398619-76b87900-ac00-11ea-8ca4-1d52b0359d64.PNG)
 ### Query 4 ###
 * Show CPI and spend for Canada (CA) broken down by channel ordered by CPI in descending order. Please think carefully which is an appropriate aggregate function for CPI.
 http://localhost:8000/api/filter?order_by=[cpi]&inc=False&countries=[CA]
+![q4](https://user-images.githubusercontent.com/22852604/84398620-77510f80-ac00-11ea-957f-d5c5b1c1c985.PNG)
 
 ## Authors ##
 
