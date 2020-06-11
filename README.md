@@ -25,7 +25,7 @@ To run the project, you need to:
 ## API Parameters ##
 
 * [display]: List of the columns that should be displayed 
-* [countrie]: List of the countries that should be filtred 
+* [countries]: List of the countries that should be filtred 
 * [os]: List of the channels that should be filtred 
 * [channels]: List of the channels that should be filtred
 * [order_by]: List of the culumns for the  order by
@@ -33,6 +33,7 @@ To run the project, you need to:
 * [sum]:  List of the culumns that will be summed according to the group by 
 * [start_date]:  The start date for the date filter
 * [end_date]: The end date for the date filter
+* [inc]: Defines if the order by is ascending
 
 ## Authors ##
 
