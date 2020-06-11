@@ -24,7 +24,7 @@ To run the project, you need to:
 
 ## API Parameters ##
 
-* display: List of the columns that should be displayed 
+* [display]: List of the columns that should be displayed 
 * countrie: List of the countries that should be filtred 
 * os: List of the channels that should be filtred 
 * channels: List of the channels that should be filtred
