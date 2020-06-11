@@ -1,4 +1,4 @@
-# filter_api
+# Filter_api
 A python API for filtering Csv file data given by Adjust.
 [More details](https://gist.github.com/kotik/93bbded94031a04e46f75cbef23b2ec7)
 
