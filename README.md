@@ -20,3 +20,9 @@ To run the project, you need to:
 * Enjoy playing with filters :D .
 
 
+## Authors ##
+
+* Jihen Bouguerra
+  * Github: [https://github.com/jihenBouguerra](https://github.com/jihenBouguerra)
+  * Email: [bouguera.jihen@gmail.com](bouguera.jihen@gmail.com)
+  * LinkedIn: [jihen-bouguerra](https://www.linkedin.com/in/jihen-bouguerra/)
