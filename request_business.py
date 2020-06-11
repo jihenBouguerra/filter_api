@@ -31,8 +31,6 @@ class RequestBusiness(falcon.Request):
         self.order_by = order_by
         self.valid = self.control_request()
         self.result = self.filter_data()
-        print("sum", self.sum_)
-        print("gb", self.group_by)
 
     def filter_data(self):
         result = DataFrame()
