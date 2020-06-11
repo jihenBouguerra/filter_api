@@ -1,5 +1,5 @@
 # filter_api
 
-waitress-serve --port=8000 things:app
+waitress-serve --port=8000 tfilter_api:app
 
-curl localhost:8000/hello/-1
+http://localhost:8000/api/filter?countries=[DE]
