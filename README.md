@@ -12,11 +12,11 @@ I used for the project:
 ## How to run ##
 To run the project, you need to:
 * Download the project or clone in.
-* Install all the dependencies using `pip install -r requirement.txt`. 
-* Navigate to your folder filter_api 
+* Install all the dependencies using `pip install -r requirement.txt. 
+* Navigate to your folder filter_api.
 * Start the local server using by `waitress-serve --port=8000 tfilter_api:app`.
-* The adress of the application is: http://localhost:8000/api/filter
-* Lest's filter only countries in DE :http://localhost:8000/api/filter?countries=[DE]
+* The adress of the application is: http://localhost:8000/api/filter.
+* Lest's filter only countries in DE :http://localhost:8000/api/filter?countries=[DE].
 * Enjoy playing with filters :D .
 
 
