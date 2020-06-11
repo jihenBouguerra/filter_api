@@ -22,7 +22,12 @@ To run the project, you need to:
 * Enjoy playing with the filter :smiley:.
 * More filters http://localhost:8000/api/filter?countries=[DE]&display=[date,channel,country,cpi,os]&os=[ios,android]&channels=[facebook,google,chartboost].
 
+## API Parameters ##
 
+* display: List of the columns that should be displayed 
+* countrie: List of the countries that should be filtred 
+* os: List of the channels that should be filtred 
+* channels: List of the channels that should be filtred
 ## Authors ##
 
 * Jihen Bouguerra
