@@ -1,4 +1,4 @@
-from pandas import read_csv, to_datetime, Series ,DataFrame
+from pandas import read_csv, to_datetime, Series, DataFrame
 
 from config import Configuration
 import falcon
@@ -17,7 +17,7 @@ class RequestBusiness(falcon.Request):
         return RequestBusiness.df_data
 
     def __init__(self, countries=[], operating_systems=[], channels=[], inc=False, group_by=[], display=[],
-                 start_date=Configuration.min_date, end_date=Configuration.max_date, order_by = []):
+                 start_date=Configuration.min_date, end_date=Configuration.max_date, order_by=[]):
         self.df = RequestBusiness.load_data()
         self.countries = countries
         self.start_date = start_date
@@ -45,7 +45,7 @@ class RequestBusiness(falcon.Request):
                 result = result[result["os"].notnull() & result["os"].isin(self.operating_systems)]
             if len(self.countries) > 0:
                 result = result[result["country"].notnull() & result["country"].isin(self.countries)]
-            if len(self.order_by) > 0 :
+            if len(self.order_by) > 0:
                 result.sort_values(by=self.order_by, ascending=self.inc)
             if len(self.display) > 0:
                 result = result[self.display]
@@ -57,19 +57,12 @@ class RequestBusiness(falcon.Request):
             return False
         if self.start_date > end_dt or self.start_date < start_dt:
             return False
+        if self.start_date > self.end_date:
+            return False
         for g_b in self.group_by:
             if g_b not in Configuration.group_by_columns:
                 return False
         for d in self.display:
             if d not in self.df.columns:
-                return False
-        for country in self.countries:
-            if country not in self.df.country.values:
-                return False
-        for os in self.operating_systems:
-            if os not in self.df.os.values:
-                return False
-        for channel in self.channels:
-            if channel not in self.df.channel.values:
                 return False
         return True
