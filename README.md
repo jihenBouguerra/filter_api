@@ -16,7 +16,7 @@ To run the project, you need to:
 * Download the project or clone in.
 * Install all the dependencies using `pip install -r requirement.txt. 
 * Navigate to your folder filter_api.
-* Start the local server using by `waitress-serve --port=8000 tfilter_api:app`.
+* Start the local server using by `waitress-serve --port=8000 filter_api:app`.
 * The adress of the application is: http://localhost:8000/api/filter.
 * Lest's filter only countries in DE: http://localhost:8000/api/filter?countries=[DE].
 * Enjoy playing with the filter :smiley:.
@@ -38,7 +38,7 @@ To run the project, you need to:
 ## Exemples ##
 ### Query 1 ###
 * Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order.
-*
+*http://localhost:8000/api/filter?group_by=[channel,country]&sum=[impressions,clicks]
 
 ## Authors ##
 
