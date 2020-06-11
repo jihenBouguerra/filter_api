@@ -36,7 +36,7 @@ To run the project, you need to:
 * [inc: Boolean]: Defines if the order by is ascending
 
 ## Exemples ##
-
+### Query 1 ###
 ## Authors ##
 
 * Jihen Bouguerra
