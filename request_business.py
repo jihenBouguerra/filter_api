@@ -17,7 +17,7 @@ class RequestBusiness(falcon.Request):
         return RequestBusiness.df_data
 
     def __init__(self, countries=[], operating_systems=[], channels=[], inc=False, group_by=[], display=[],
-                 start_date=Configuration.min_date, end_date=Configuration.max_date, order_by=[]):
+                 start_date=Configuration.min_date, end_date=Configuration.max_date, order_by=[], sum_=[]):
         self.df = RequestBusiness.load_data()
         self.countries = countries
         self.start_date = start_date
@@ -25,11 +25,14 @@ class RequestBusiness(falcon.Request):
         self.operating_systems = operating_systems
         self.channels = channels
         self.inc = inc
+        self.sum_ = sum_
         self.group_by = group_by
         self.display = display
         self.order_by = order_by
         self.valid = self.control_request()
         self.result = self.filter_data()
+        print("sum", self.sum_)
+        print("gb", self.group_by)
 
     def filter_data(self):
         result = DataFrame()
@@ -46,12 +49,15 @@ class RequestBusiness(falcon.Request):
             if len(self.countries) > 0:
                 result = result[result["country"].notnull() & result["country"].isin(self.countries)]
             if len(self.order_by) > 0:
-                result.sort_values(by=self.order_by, ascending=self.inc)
+                result = result.sort_values(by=self.order_by, ascending=self.inc)
+            if len(self.sum_) > 0 and len(self.group_by) > 0:
+                result = result.groupby(self.group_by)[self.sum_].sum().reset_index()
             if len(self.display) > 0:
                 result = result[self.display]
         return result
 
     def control_request(self):
+        return True
         start_dt, end_dt = Configuration.date_range()
         if self.end_date > end_dt or self.end_date < start_dt:
             return False
@@ -61,6 +67,12 @@ class RequestBusiness(falcon.Request):
             return False
         for g_b in self.group_by:
             if g_b not in Configuration.group_by_columns:
+                return False
+        for o_b in self.order_by:
+            if o_b not in self.df.columns:
+                return False
+        for s_c in self.sum_:
+            if s_c not in Configuration.sum_columns or len(self.order_by) == 0:
                 return False
         for d in self.display:
             if d not in self.df.columns:
