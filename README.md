@@ -19,7 +19,7 @@ To run the project, you need to:
 * Start the local server using by `waitress-serve --port=8000 tfilter_api:app`.
 * The adress of the application is: http://localhost:8000/api/filter.
 * Lest's filter only countries in DE: http://localhost:8000/api/filter?countries=[DE].
-* Enjoy playing with the filter :D .
+* Enjoy playing with the filter :smiley:.
 
 
 ## Authors ##
